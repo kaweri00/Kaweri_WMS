@@ -4,9 +4,7 @@ import java.util.Objects;
 
 public class Product {
 
-
-
-    public enum ProductState { ACTIVE, INACTIVE}
+    public enum ProductState { ACTIVE, INACTIVE }
 
     private String sku;
     private String description;
@@ -32,6 +30,10 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public boolean isActive(){
+        return productState == ProductState.ACTIVE;
     }
     
     public void activate(){
